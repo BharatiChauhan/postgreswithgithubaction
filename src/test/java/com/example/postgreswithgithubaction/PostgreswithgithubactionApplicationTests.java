@@ -1,4 +1,4 @@
-package com.example.postgreswithgithubaction;
+package test.com.example.postgreswithgithubaction;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
