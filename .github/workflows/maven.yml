@@ -21,6 +21,10 @@ jobs:
 
         env:
           POSTGRES_PASSWORD: root
+          POSTGRES_USER: postgres
+          POSTGRES_DB: postgres
+          POSTGRES_PORT: 5432
+          POSTGRES_URL: postgres://postgres:postgres@localhost:5432/postgres
 
         options: >-
           --health-cmd pg_isready
@@ -32,6 +36,12 @@ jobs:
     - uses: actions/checkout@v3
     - name: Set up JDK 17
       uses: actions/setup-java@v3
+    - name: Install packages
+      run: "npm ci"
+    - name: Setup Database
+      run: "npm run migrations"
+    - name: Run Tests
+      run: "npm run test"
       with:
         java-version: '17'
         distribution: 'temurin'
