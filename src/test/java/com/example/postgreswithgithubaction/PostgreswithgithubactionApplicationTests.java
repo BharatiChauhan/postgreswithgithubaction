@@ -13,8 +13,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 class PostgreswithgithubactionApplicationTests {
 
-//	@Test
-//	void contextLoads() {
-//	}
+	@Test
+	void contextLoads() {
+	}
 
 }
