@@ -42,7 +42,7 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn clean install -f pom.xml
+      run: mvn clean install
     - name: Install packages
       run: "npm ci"
     - name: Setup Database
