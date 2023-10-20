@@ -82,7 +82,7 @@ jobs:
 
     jobs:
       download:
-        runs-on: ubuntu-latest
+
 
         steps:
           - name: Checkout repository
