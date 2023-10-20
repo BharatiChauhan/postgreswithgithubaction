@@ -61,14 +61,17 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
+        needs: build
+
+
       - uses: actions/download-artifact@v3
         with:
-          name: my-artifact
-          path: D:/applicationartifact
-
-      - name: Display structure of downloaded files
-        run: ls -R
-        working-directory: D:/postgreswithgithubaction
+            name: Build
+            path: build
+             - run: zip -r build.zip build/
+             - uses: action/release-action@v1
+              with:
+                artifacts: "build.zip"
 
         # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
       - name: Update dependency graph
