@@ -17,8 +17,7 @@ jobs:
 
     services:
 
-      depends_on:
-                   - psql
+      depends_on: psql
 
       psql:
 
