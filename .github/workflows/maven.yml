@@ -54,6 +54,10 @@ jobs:
       - name: Build & push Docker image
         uses: mr-smithers-excellent/docker-build-push@v6
 
+
+
+
+
         with:
           image: bharati03/database
           tags: latest
@@ -63,7 +67,11 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
 
-
+      - name: persist workflow as artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: github-actions-artifacts
+          path: staging
 
 
 
