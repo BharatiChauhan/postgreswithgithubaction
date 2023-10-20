@@ -13,12 +13,14 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    depends_on:
-                -psql
+
 
     services:
 
-      postgres:
+      depends_on:
+                   - psql
+
+      psql:
 
         image: postgres:15.4
 
