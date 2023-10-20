@@ -75,7 +75,7 @@ jobs:
           name: github-actions-artifacts
           path: staging
 
-      - uses: actions/release-downloader@v3
+      - uses: BharatiChauhan/postgreswithgithubaction@v3
         with:
           fileName: "postgreswithgithubaction.zip"
           latest: true
