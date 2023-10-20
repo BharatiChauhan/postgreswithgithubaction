@@ -71,7 +71,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: github-actions-artifacts
-          path: staging
+          path: postgreswithgithubaction
 
 
 
