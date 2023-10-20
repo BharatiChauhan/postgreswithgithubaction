@@ -37,7 +37,7 @@ jobs:
           --health-timeout 5s
           --health-retries 5
 
-    needs: build
+
     steps:
       - uses: actions/checkout@v3
       - name: Set up JDK 17
