@@ -17,12 +17,9 @@ jobs:
 
     services:
 
-      depends_on: psql
-      credentials:
-        username: bharati03
-        password: ${{ secrets.docker_hub_password}}
 
-      psql:
+
+      postgres:
 
         image: postgres:15.4
 
