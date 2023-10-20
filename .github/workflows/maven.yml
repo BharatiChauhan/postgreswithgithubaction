@@ -65,14 +65,7 @@ jobs:
 
 
 
-      - uses: actions/download-artifact@v3
-        with:
-            name: Build
-            path: build
-             - run: zip -r build.zip build/
-             - uses: action/release-action@v1
-              with:
-                artifacts: "build.zip"
+
 
         # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
       - name: Update dependency graph
