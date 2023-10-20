@@ -13,6 +13,9 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    depends_on:
+                -psql
+
     services:
 
       postgres:
@@ -25,7 +28,7 @@ jobs:
           POSTGRES_USER: postgres
           POSTGRES_DB: postgres
           POSTGRES_PORT: 5432
-          POSTGRES_URL: postgres://postgres:postgres@localhost:5432/postgres
+          POSTGRES_URL: postgres://postgres:postgres@psql:5432/postgres
 
         options: >-
           --health-cmd pg_isready
