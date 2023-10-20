@@ -17,7 +17,9 @@ jobs:
 
     services:
 
-       postgres:
+
+
+      postgres:
 
         image: postgres:15.4
 
@@ -58,12 +60,13 @@ jobs:
           registry: docker.io
           dockerfile: Dockerfile
           username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: persist workflow as artifacts
-        uses: actions/upload-artifact@v3
-        with:
-           name: github-actions-artifact
-           path: staging
+
+
+
+
+
 
 
 
