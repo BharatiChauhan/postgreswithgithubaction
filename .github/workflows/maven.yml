@@ -77,9 +77,6 @@ jobs:
           with:
             name: static-site
             path: .next/
-
-
-
   release-project:
       name: Release project
       runs-on: ubuntu-latest
