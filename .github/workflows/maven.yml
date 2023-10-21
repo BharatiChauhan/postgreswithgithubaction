@@ -74,15 +74,7 @@ jobs:
         with:
           name: github-actions-artifacts
           path: staging
-      - name: Checkout repository
-        uses: actions/checkout@v3
-      - name: Upload to Google Drive
-        uses: ./google-drive-upload-git-action
-        with:
-            service_account_credentials: ${{ secrets.GOOGLE_DRIVE_SERVICE_ACCOUNT_CREDENTIALS }}
-            parent_folder_id: ${{ secrets.GOOGLE_DRIVE_PARENT_FOLDER_ID }}
-            file_paths: ./*
-            recursive: true
+
 
 
 
